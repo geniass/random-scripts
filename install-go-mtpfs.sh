@@ -3,7 +3,8 @@
 # it will install the binary to /usr/local/bin
 
 sudo apt-get install golang-go libmtp-dev
-mkdir /tmp/go 
+mkdir -p /tmp/go 
 export GOPATH=/tmp/go
 go get github.com/hanwen/go-mtpfs
 sudo cp /tmp/go/bin/go-mtpfs /usr/local/bin
+echo "Done."
