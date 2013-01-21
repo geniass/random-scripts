@@ -1,6 +1,12 @@
 #!/bin/bash
 
-my_function()
+
+# sudo cp rescan-esata /usr/bin/
+# sudo crontab -e
+# @reboot /usr/bin/rescan-esata
+
+
+rescan()
 {
 	`for i in $(ls /sys/class/scsi_host/); do echo "- - -" > /sys/class/scsi_host/$i/scan; done`	
 }
@@ -15,4 +21,4 @@ if [ ! $( id -u ) -eq 0 ]; then
   }
 
   chk_root
-  my_function
+  rescan
