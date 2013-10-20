@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Blocks some of youtube's caches because ISPs like telkom throttle them. I'm now streaming youtube at 3.5 Mb/s
+# Source: http://www.reddit.com/r/technology/comments/13kmvd/have_time_warner_internet_but_can_barely_stream/
+
 YT_CACHE_URL=173.194.55.0/24
 
 block(){
